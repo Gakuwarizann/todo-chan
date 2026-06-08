@@ -1,26 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html>
     <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400&display=swap" rel="stylesheet">
-
+        <meta charset = "UTF-8">
+        <title>トドちゃん</title>
         <link rel="stylesheet" href="style.css">
-        <meta charset="utf-8" />
-        <title>Todo-Chan</title>
+        
     </head>
 
+
     <body>
-        <h1>Todo-chan</h1>
-        <table>
+
+        <h1>トドちゃんTodo</h1>
+        <p>↓ここにTodoを入力　数字が大きくなるほど優先度が高い</p>
+        <input class="mojiIn" id="todoInput" type="text">
+        <select id = "priorityIn">
+            <option>4</option>
+            <option>3</option>
+            <option>2</option>
+            <option>1</option>
+        </select>
+        <button id="addButton" class="buttonA">追加</button>
+
+        <table id="todoList">
+            <tr>
+                <th>Todo</th>
+                <th>優先度</th>
+            </tr>
 
             <tr>
-                <th>優先順位</th>
-                <th>Todo</th>
-
+                
             </tr>
             
         </table>
-    </body>
+        
+        <script src="script.js"></script>
 
+        
+    </body>
 </html>

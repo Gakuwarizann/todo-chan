@@ -1,5 +1,33 @@
-body{
-    font-family: 'Zen Maru Gothic';
-    font-weight: 400;
-    font-style: normal;
+.mojiIn{
+    width:60%;
+}
+
+.numIn{
+    width: 10%;
+}
+
+button{
+    background-color: #b0b0b0;
+    width:50px;
+    height:25px;
+    border:0px;
+    border-radius:0%;
+}
+
+.buttonA{
+    background-color: #e08728;
+}
+
+select{
+    width:10%;
+}
+
+
+table{
+    border-collapse: collapse;
+    border: 2px solid;
+}
+
+th,td{
+    border:1px solid;
 }
