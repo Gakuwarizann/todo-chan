@@ -99,6 +99,7 @@ function renderTodo(){
 
         if(todo.completed){
         tr.style.opacity = "0.5";
+        td.style.textDecoration = "line-through";
         }
     }
 }
