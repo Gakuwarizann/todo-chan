@@ -80,14 +80,14 @@ function renderTodo(){
                 renderTodo();
                 saveTodo();
             }
+            
+        });
 
         let checkbox = document.createElement("input");
         checkbox.type = "checkbox";
         let td4 = document.createElement("td");
         td4.appendChild(checkbox); 
         tr.appendChild(td4);
-            
-        });
 
         td3.appendChild(deleteButton);
 
@@ -101,6 +101,7 @@ function renderTodo(){
         tr.style.opacity = "0.5";
         td.style.textDecoration = "line-through";
         }
+        
     }
 }
 
@@ -116,7 +117,7 @@ function addTodo(){
     
     todoAry.push({
         text: text,
-        priority:Number(priority)
+        priority:Number(priority),
         completed:false
     });
 
@@ -132,13 +133,7 @@ function addTodo(){
 
 
 
-checkbox.addEventListener("change", function(){
 
-    todo.completed = checkbox.checked;
-
-    saveTodo();
-
-});
 
 
 
