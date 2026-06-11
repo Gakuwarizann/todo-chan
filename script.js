@@ -15,6 +15,8 @@ function saveTodo(){
         JSON.stringify(todoAry)
     );
 
+    console.log("保存したよ");
+
 }
 
 function loadTodo(){
