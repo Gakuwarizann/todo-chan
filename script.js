@@ -48,8 +48,11 @@ function compareTodo(a,b){
 function renderTodo(){
     todoList.innerHTML = `
         <tr>
+            <th>完了</th>
             <th>Todo</th>
             <th>優先度</th>
+            <th>削除</th>
+            
         </tr>        
     `;
 
