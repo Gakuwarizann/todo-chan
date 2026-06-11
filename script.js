@@ -80,6 +80,13 @@ function renderTodo(){
                 renderTodo();
                 saveTodo();
             }
+
+        let checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        let td4 = document.createElement("td");
+        td4.appendChild(checkbox); 
+        tr.appendChild(td4);
+            
         });
 
         td3.appendChild(deleteButton);
@@ -105,6 +112,7 @@ function addTodo(){
     todoAry.push({
         text: text,
         priority:Number(priority)
+        completed:false
     });
 
     todoAry.sort(compareTodo);
@@ -118,4 +126,17 @@ function addTodo(){
 }
 
 
+
+checkbox.addEventListener("change", function(){
+
+    todo.completed = checkbox.checked;
+
+    saveTodo();
+
+});
+
+
+
 loadTodo();
+
+
