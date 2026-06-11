@@ -9,18 +9,15 @@ let priorityIn = document.getElementById("priorityIn");
 addButton.addEventListener("click",addTodo)
 
 function saveTodo(){
-
+    console.log("保存したよ");
     localStorage.setItem(
         "todoData",
         JSON.stringify(todoAry)
     );
-
-    console.log("保存したよ");
-
 }
 
 function loadTodo(){
-
+    console.log(localStorage.getItem("todoData"));
     let data = localStorage.getItem("todoData");
 
     if(data !== null){
@@ -29,8 +26,6 @@ function loadTodo(){
 
         renderTodo();
     }
-
-    console.log(localStorage.getItem("todoData"));
 }
 
 
