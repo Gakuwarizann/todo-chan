@@ -88,10 +88,20 @@ function renderTodo(){
 
         let checkbox = document.createElement("input");
         checkbox.type = "checkbox";
+
+        
+        checkbox.addEventListener("change", function(){
+        todo.completed = checkbox.checked;
+        saveTodo();
+        renderTodo();
+        });
+        
         let td4 = document.createElement("td");
         td4.appendChild(checkbox); 
         tr.appendChild(td4);
+        checkbox.checked = todo.completed;
 
+        
         td3.appendChild(deleteButton);
 
         tr.appendChild(td);
