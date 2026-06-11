@@ -96,6 +96,10 @@ function renderTodo(){
         tr.appendChild(td3);
 
         todoList.appendChild(tr);
+
+        if(todo.completed){
+        tr.style.opacity = "0.5";
+        }
     }
 }
 
