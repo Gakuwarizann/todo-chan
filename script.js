@@ -8,6 +8,27 @@ let priorityIn = document.getElementById("priorityIn");
 
 addButton.addEventListener("click",addTodo)
 
+function saveTodo(){
+
+    localStorage.setItem(
+        "todoData",
+        JSON.stringify(todoAry)
+    );
+
+}
+
+function loadTodo(){
+
+    let data = localStorage.getItem("todoData");
+
+    if(data !== null){
+
+        todoAry = JSON.parse(data);
+
+        renderTodo();
+    }
+}
+
 
 let todoAry = [];
 
@@ -58,6 +79,7 @@ function renderTodo(){
             if(result){
                 todoAry.splice(i,1);
                 renderTodo();
+                saveTodo();
             }
         });
 
@@ -74,12 +96,10 @@ function renderTodo(){
 
 function addTodo(){
     let text = todoInput.value;
-    let tr = document.createElement("tr");
-    let td = document.createElement("td");
 
 
     let priority = priorityIn.value;
-    let td2 = document.createElement("td");
+
     
 
     
@@ -94,4 +114,9 @@ function addTodo(){
 
     todoInput.value = "";
     priorityIn.value = "4";
+
+    saveTodo();
 }
+
+
+loadTodo();
