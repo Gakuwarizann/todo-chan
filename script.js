@@ -29,6 +29,8 @@ function loadTodo(){
 
         renderTodo();
     }
+
+    console.log(localStorage.getItem("todoData"));
 }
 
 
